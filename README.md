@@ -1,5 +1,7 @@
 # Bootstrap Rating
 
+Updated to work with Bootstrap 4
+
 Bootstrap Rating is a jQuery plugin that creates a rating control that uses Bootstrap [glyphicons](http://glyphicons.com/) for rating symbols.
 
 See [bootstrap rating](http://dreyescat.github.io/bootstrap-rating/) in action.
