@@ -2,7 +2,7 @@
 
 Updated to work with Bootstrap 4
 
-Bootstrap Rating is a jQuery plugin that creates a rating control that uses Bootstrap [glyphicons](http://glyphicons.com/) for rating symbols.
+Bootstrap Rating is a jQuery plugin that creates a rating control that uses Bootstrap [Font Awesome](http://fontawesome.io/) for rating symbols.
 
 See [bootstrap rating](http://dreyescat.github.io/bootstrap-rating/) in action.
 
@@ -50,53 +50,41 @@ Or attach events:
 
 ## Customizing the rating symbols
 
-The default rating symbols can be replaced with another ones. Just add the desired glyphicon for the filled and empty states:
+The default rating symbols can be replaced with another ones. Just add the desired icon for the filled and empty states:
 
-    <input type="hidden" class="rating" data-filled="glyphicon glyphicon-heart" data-empty="glyphicon glyphicon-heart-empty"/>
+    <input type="hidden" class="rating" data-filled="fa fa-heart" data-empty="fa fa-heart-o"/>
 
-Check the [available glyphs](http://getbootstrap.com/components/#glyphicons-glyphs).
+Check the [available icons](http://fontawesome.io/icons/).
 
-Again, you can explicitly initialize the plugin passing the glyphicons as parameters:
+Again, you can explicitly initialize the plugin passing the icons as parameters:
 
     $('input').rating({
-      filled: 'glyphicon glyphicon-heart',
-      empty: 'glyphicon glyphicon-heart-empty'
+      filled: 'fa fa-heart',
+      empty: 'fa fa-heart-o'
     });
 
-If you want to change the default glyphicons for all the rating controls, you only need to override the plugin default values:
+If you want to change the default icons for all the rating controls, you only need to override the plugin default values:
 
-    $.fn.rating.defaults.filled = 'glyphicon glyphicon-heart';
-    $.fn.rating.defaults.empty = 'glyphicon glyphicon-heart-empty';
+    $.fn.rating.defaults.filled = 'fa fa-heart';
+    $.fn.rating.defaults.empty = 'fa fa-heart-o';
 
 This needs only be called once, but remember to make these assignments before the rating controls are created.
 
 If you even want more control over the symbols appearance, you can customize the selected symbol filled state with the filled-selected attribute. This attribute takes precedence over the default filled state allowing you, for example, to fill only the selected one:
 
-    <input type="hidden" class="rating" data-filled="glyphicon glyphicon-heart-empty" data-filled-selected="glyphicon glyphicon-heart" data-empty="glyphicon glyphicon-heart-empty"/>
+    <input type="hidden" class="rating" data-filled="fa fa-heart-o" data-filled-selected="fa fa-heart" data-empty="fa fa-heart-o"/>
 
 Or programmatically:
 
     $('input').rating({
-      filled: 'glyphicon glyphicon-heart-empty',
-      filledSelected: 'glyphicon glyphicon-heart',
-      empty: 'glyphicon glyphicon-heart-empty'
+      filled: 'fa fa-heart-o',
+      filledSelected: 'fa fa-heart',
+      empty: 'fa fa-heart-o'
     });
 
 ### Using Non-Bootsrap icons
 
-Though the original idea was to use glyphicons provided by Bootstrap, any symbol can be used. It means that the rating control is not tightly tied to Bootstrap and you can use it without Bootstrap.
-
-#### Font Awesome icons
-
-You can use the `Font Awesome by Dave Gandy - http://fontawesome.io`. Check [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) for a list of available icons.
-
-1. Include in the `<head>` the reference to the Font Awesome CSS.
-
-        <link rel="stylesheet" href="path/to/font-awesome.min.css">
-
-1. Start using the classes provided by Font Awesome.
-
-        <input type="hidden" class="rating" data-filled="fa fa-bell fa-3x" data-empty="fa fa-bell-o fa-3x"/>
+Though the original idea was to use fas provided by Bootstrap, any symbol can be used. It means that the rating control is not tightly tied to Bootstrap and you can use it without Bootstrap.
 
 #### Custom CSS icons
 
